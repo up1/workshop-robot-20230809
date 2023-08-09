@@ -10,7 +10,7 @@ Flow UI ไปยังหน้า login
 
 *** Keywords ***
 ทำการดูรายละเอียดของการประกาศ
-    Element Should Be Visible   id:announceModal
+    Wait Until Element Is Visible   id:announceModal
     Click Element    xpath://*[@id="announceModal"]/div/div/div[2]/div/div[2]/span/a
 
     Switch Window	NEW
