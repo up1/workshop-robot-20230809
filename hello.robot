@@ -9,6 +9,10 @@ Library    SeleniumLibrary
 
 *** Keywords ***
 จะพบข้อมูลและแสดงผลการค้นหาได้อย่างถูกต้อง
+    Wait Until Element Contains   id:result-stats   ผลการค้นหาประมาณ
+    Wait Until Element Contains   id:result-stats   รายการ
+    Wait Until Element Contains   id:result-stats   (
+    Wait Until Element Contains   id:result-stats   )
     ${result}=  Get Text  id:result-stats
     Log To Console    ${result}
 
