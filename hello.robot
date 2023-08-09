@@ -11,3 +11,7 @@ Library    SeleniumLibrary
 ผู้ใช้งานไปยังหน้าค้นหาด้วย url google.com
     Open Browser    https://www.google.com    gc   
     ...    options=add_experimental_option("detach", True)
+    Maximize Browser Window
+    # Set Window Size   420   521
+    Wait Until Element Is Enabled   name:q
+    Element Should Be Visible   name:q
