@@ -8,6 +8,10 @@ Library    SeleniumLibrary
     จะพบข้อมูลและแสดงผลการค้นหาได้อย่างถูกต้อง
 
 *** Keywords ***
+จะพบข้อมูลและแสดงผลการค้นหาได้อย่างถูกต้อง
+    ${result}=  Get Text  id:result-stats
+    Log To Console    ${result}
+
 ค้นหาข้อมูลด้วยคำว่า robot
     Input Text   name:q    robot
     Press Keys   name:q    RETURN
