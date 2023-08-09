@@ -1,6 +1,9 @@
 *** Settings ***
 Library   SeleniumLibrary
 
+*** Variables ***
+${URL}    https://efiling.rd.go.th/rd-cms/
+
 *** Test Cases ***
 Flow UI ไปยังหน้า login
     เข้าหน้าแรกของระบบยื่นภาษี
@@ -22,6 +25,6 @@ Flow UI ไปยังหน้า login
     Click Element   xpath://*[@id="announceModal"]/div/div/div[1]/button
     
 เข้าหน้าแรกของระบบยื่นภาษี
-    Open Browser    https://efiling.rd.go.th/rd-cms/    gc   
+    Open Browser    ${URL}    gc   
     ...    options=add_experimental_option("detach", True)
     Maximize Browser Window
