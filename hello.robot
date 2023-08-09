@@ -8,6 +8,10 @@ Library    SeleniumLibrary
     จะพบข้อมูลและแสดงผลการค้นหาได้อย่างถูกต้อง
 
 *** Keywords ***
+ค้นหาข้อมูลด้วยคำว่า robot
+    Input Text   name:q    robot
+    Press Keys   name:q    RETURN
+
 ผู้ใช้งานไปยังหน้าค้นหาด้วย url google.com
     Open Browser    https://www.google.com    gc   
     ...    options=add_experimental_option("detach", True)
