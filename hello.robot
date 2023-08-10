@@ -1,6 +1,6 @@
 *** Settings ***
-Library    SeleniumLibrary
 Library    String
+Resource   common.resource
 
 *** Test Cases ***
 ค้นหาคำว่า robot เจอ ด้วย browser chrome
@@ -37,11 +37,3 @@ Library    String
     # Set Window Size   420   521
     Wait Until Element Is Enabled   name:q
     Element Should Be Visible   name:q
-
-ทำการเปิด url="${target_url}" ใน browser "${browser_type}"
-    Open Browser    ${target_url}    ${browser_type} 
-    Maximize Browser Window
-Try to open in browser
-    [Arguments]  ${target_url}  ${browser_type}
-    Open Browser    ${target_url}    ${browser_type} 
-    Maximize Browser Window
