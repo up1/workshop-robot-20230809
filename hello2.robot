@@ -1,6 +1,7 @@
 *** Settings ***
 Library    String
 Resource   common.resource
+Suite Teardown   Close All Browsers
 
 *** Test Cases ***
 ค้นหาคำว่า robot เจอ ด้วย browser chrome
@@ -40,7 +41,7 @@ Resource   common.resource
 
 ผู้ใช้งานไปยังหน้าค้นหาด้วย url google.com
     # Try to open in browser   https://www.google.com  gc
-    ทำการเปิด url="https://www.google.com" ใน browser "chrome"
+    ทำการเปิด url="https://www.google.com" ใน browser "headlesschrome"
     # Set Window Size   420   521
     Wait Until Element Is Enabled   name:q
     Element Should Be Visible   name:q
