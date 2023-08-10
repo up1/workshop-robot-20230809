@@ -22,6 +22,19 @@ Success with upload 3 files
     Choose File	    xpath:${upload_form}
     ...    ${CURDIR}/files/3.txt
     # Check stage ของ first page !!!
+    Wait Until Page Contains Element   xpath://div[2]/table/tbody/tr   
+    ...    limit=3
+    
+    # File 1
+    Wait Until Element Is Enabled   xpath://div[2]/table/tbody/tr[1]/td[5]/button[1]
+    Element Should Be Disabled      xpath://div[2]/table/tbody/tr[1]/td[5]/button[2]
+    # File 2
+    Wait Until Element Is Enabled   xpath://div[2]/table/tbody/tr[2]/td[5]/button[1]
+    Element Should Be Disabled      xpath://div[2]/table/tbody/tr[2]/td[5]/button[2]
+    # File 3
+    Wait Until Element Is Enabled   xpath://div[2]/table/tbody/tr[3]/td[5]/button[1]
+    Element Should Be Disabled      xpath://div[2]/table/tbody/tr[3]/td[5]/button[2]
+    
 
 ไปยังหน้า upload file
     Open Browser    http://nervgh.github.io/pages/angular-file-upload/examples/simple/
