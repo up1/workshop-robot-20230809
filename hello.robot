@@ -32,9 +32,16 @@ Library    String
     Press Keys   name:q    RETURN
 
 ผู้ใช้งานไปยังหน้าค้นหาด้วย url google.com
-    Open Browser    https://www.google.com    gc   
-    ...    options=add_experimental_option("detach", True)
-    Maximize Browser Window
+    # Try to open in browser   https://www.google.com  gc
+    ทำการเปิด url="https://www.google.com" ใน browser "chrome"
     # Set Window Size   420   521
     Wait Until Element Is Enabled   name:q
     Element Should Be Visible   name:q
+
+ทำการเปิด url="${target_url}" ใน browser "${browser_type}"
+    Open Browser    ${target_url}    ${browser_type} 
+    Maximize Browser Window
+Try to open in browser
+    [Arguments]  ${target_url}  ${browser_type}
+    Open Browser    ${target_url}    ${browser_type} 
+    Maximize Browser Window
