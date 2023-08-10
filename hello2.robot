@@ -9,6 +9,7 @@ Resource   common.resource
     จะพบข้อมูลและแสดงผลการค้นหาได้อย่างถูกต้อง
 
 ค้นหาคำว่า swpark เจอ ด้วย browser chrome
+    # robot -i testing   hello2.robot
     [Tags]  testing
     ผู้ใช้งานไปยังหน้าค้นหาด้วย url google.com
     ค้นหาข้อมูลด้วยคำว่า swpark
