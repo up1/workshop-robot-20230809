@@ -1,6 +1,9 @@
 *** Settings ***
 Library    SeleniumLibrary
 
+*** Variables ***
+${upload_form}    //*[@id="ng-app"]/body/div/div[2]/div[1]/input[2]
+
 *** Test Cases ***
 Success with upload 3 files
     ไปยังหน้า upload file
@@ -12,11 +15,11 @@ Success with upload 3 files
 
 *** Keywords ***
 ทำการเลือก 3 file ที่จะ upload
-    Choose File	    xpath://*[@id="ng-app"]/body/div/div[2]/div[1]/input[2]	    
+    Choose File	    xpath:${upload_form}	    
     ...    ${CURDIR}/files/1.txt
-    Choose File	    xpath://*[@id="ng-app"]/body/div/div[2]/div[1]/input[2]	    
+    Choose File	    xpath:${upload_form}
     ...    ${CURDIR}/files/2.txt
-    Choose File	    xpath://*[@id="ng-app"]/body/div/div[2]/div[1]/input[2]	    
+    Choose File	    xpath:${upload_form}
     ...    ${CURDIR}/files/3.txt
     # Check stage ของ first page !!!
 
