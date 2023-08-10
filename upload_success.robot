@@ -11,9 +11,20 @@ Success with upload 3 files
     ทำการ upload file ที่หนึ่ง และ ตรวจสอบผล
     ทำการ upload file ที่สอง และ ตรวจสอบผล
     ทำการ upload file ที่สาม และ ตรวจสอบผล
-    ตรวจสอบผลการ upload เมื่อครบทั้ง 3 file
+    # ตรวจสอบผลการ upload เมื่อครบทั้ง 3 file
 
 *** Keywords ***
+ทำการ upload file ที่หนึ่ง และ ตรวจสอบผล
+    Click Element    xpath://div[2]/table/tbody/tr[1]/td[5]/button[1]
+    Wait Until Element Is Visible   xpath://div[@style="width: 33%;"]
+
+ทำการ upload file ที่สอง และ ตรวจสอบผล
+    Click Element    xpath://div[2]/table/tbody/tr[2]/td[5]/button[1]
+    Wait Until Element Is Visible   xpath://div[@style="width: 67%;"]
+ทำการ upload file ที่สาม และ ตรวจสอบผล
+    Click Element    xpath://div[2]/table/tbody/tr[3]/td[5]/button[1]
+    Wait Until Element Is Visible   xpath://div[@style="width: 100%;"]
+
 ทำการเลือก 3 file ที่จะ upload
     Choose File	    xpath:${upload_form}	    
     ...    ${CURDIR}/files/1.txt
